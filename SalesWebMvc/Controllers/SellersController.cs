@@ -6,7 +6,6 @@ using SalesWebMvc.Services.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SalesWebMvc.Controllers
@@ -26,7 +25,7 @@ namespace SalesWebMvc.Controllers
 
             return View(list);
         }
-        
+
         public async Task<IActionResult> Create()
         {
             var departments = await _departmentService.FindAllAsync();
